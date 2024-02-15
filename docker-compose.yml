@@ -1,0 +1,19 @@
+version: "3"
+services:
+  web:
+    image: web-php-cgi:latest
+    build: ./Dockerfile
+    tty: true
+    volumes:
+      - ./data:/home/pi
+    ports:
+      - "5185:80"
+    environment:
+      - "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+    networks:
+      network:
+
+networks:
+  network:
+    ipam:
+      driver: default

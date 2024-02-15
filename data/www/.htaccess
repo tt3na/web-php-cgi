@@ -1,0 +1,4 @@
+SetEnv LDAP_HOST 
+SetEnv LDAP_PORT 
+SetEnv LDAP_BASE_DN 
+SetEnv REDIRECT 
